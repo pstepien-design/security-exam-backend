@@ -74,6 +74,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the backend of the project");
+});
+
 import authRouter from "./routers/authRouter.js";
 app.use(authRouter);
 
