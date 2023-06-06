@@ -1,4 +1,6 @@
 import { Router } from "express";
+import dotenv from "dotenv";
+
 import User from "../db/schema/user.schema.js";
 import {
   login,
@@ -6,7 +8,6 @@ import {
   refreshAuthToken,
   verifyToken,
 } from "../authentication/authentication.js";
-import dotenv from "dotenv";
 
 dotenv.config({ path: "./.env" });
 const authRouter = Router();
