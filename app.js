@@ -70,8 +70,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.use(express.static(path.resolve("../frontend/public")));
-app.use(express.urlencoded({ extended: true }));
+/* app.use(express.urlencoded({ extended: true })); */
 
 app.use(express.json());
 
