@@ -27,7 +27,7 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'"],
+      /*  scriptSrc: ["'self'"],
       styleSrc: ["'self'"],
       objectSrc: ["'none'"],
       imgSrc: ["'self'"],
@@ -38,7 +38,7 @@ app.use(
       childSrc: ["'self'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
-      frameAncestors: ["'self'"],
+      frameAncestors: ["'self'"], */
     },
   })
 );
