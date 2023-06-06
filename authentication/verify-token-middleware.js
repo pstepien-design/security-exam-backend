@@ -1,7 +1,7 @@
 import { verifyToken } from "./authentication.js";
 
 export const verifyTokenMiddleware = async (req, res, next) => {
-  /*  try {
+  try {
     const token = req.headers.authorization.split(" ")[1];
     const response = await verifyToken(token);
 
@@ -13,6 +13,5 @@ export const verifyTokenMiddleware = async (req, res, next) => {
     }
   } catch {
     res.status(401).send("Unauthorized, token verification failed");
-  } */
-  next();
+  }
 };
