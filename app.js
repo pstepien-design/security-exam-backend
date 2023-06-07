@@ -13,12 +13,12 @@ const app = express();
 dotenv.config();
 
 // Prevent DOS attacks by limiting the number of requests from a single IP > for DDOS it will be hard, would need to use a service like Cloudflare
-const limiter = rateLimit({
+/* const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // limit each IP to 100 requests per windowMs
   message: "Too many requests from this IP, please try again later",
   delayMs: 0,
-});
+}); */
 
 app.use(limiter);
 
