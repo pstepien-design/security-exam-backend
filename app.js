@@ -48,7 +48,7 @@ const checkOriginAndRefererHeaders = (req, res, next) => {
     const origin = req.headers.origin;
     const referer = req.headers.referer;
 
-    if (origin && referer !== `${process.env.FRONTEND_URL}/`) {
+    if (origin && !referer.startsWith(process.env.FRONTEND_URL)) {
       return res
         .status(403)
         .json({ error: "Invalid Origin or Referer header" });
