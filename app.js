@@ -27,7 +27,7 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'"],
+      /*  scriptSrc: ["'self'"],
       styleSrc: ["'self'"],
       objectSrc: ["'none'"],
       imgSrc: ["'self'"],
@@ -38,7 +38,7 @@ app.use(
       childSrc: ["'self'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
-      frameAncestors: ["'self'"],
+      frameAncestors: ["'self'"], */
     },
   })
 );
@@ -70,7 +70,13 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.status(200).send("Welcome to the backend of the project");
+});
 
 import authRouter from "./routers/authRouter.js";
 app.use(authRouter);
