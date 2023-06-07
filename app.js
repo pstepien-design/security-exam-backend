@@ -33,7 +33,7 @@ app.use(
 
 app.use(helmet.frameguard({ action: "sameorigin" }));
 
-app.use(helmet({ xContentTypeOptions: false }));
+app.use(helmet.noSniff());
 app.use(helmet.hidePoweredBy());
 
 // Checking origin and referer headers to prevent CSRF attacks
