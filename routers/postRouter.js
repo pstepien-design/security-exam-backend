@@ -51,10 +51,10 @@ postRouter.post("/posts", async (req, res) => {
   const likes = [];
   const { error } = postValidator.validate(req.body);
 
-  // if (error) {
-  //   console.log(error);
-  //   return res.send({ error: 'Invalid post body' });
-  // }
+  if (error) {
+    console.log(error);
+    return res.send({ error: "Invalid post body" });
+  }
   const post = new Post({
     title,
     text,
