@@ -27,18 +27,6 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      /*  scriptSrc: ["'self'"],
-      styleSrc: ["'self'"],
-      objectSrc: ["'none'"],
-      imgSrc: ["'self'"],
-      mediaSrc: ["'self'"],
-      frameSrc: ["'self'"],
-      fontSrc: ["'self'"],
-      connectSrc: ["'self'"],
-      childSrc: ["'self'"],
-      baseUri: ["'self'"],
-      formAction: ["'self'"],
-      frameAncestors: ["'self'"], */
     },
   })
 );
