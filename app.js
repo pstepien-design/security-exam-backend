@@ -21,7 +21,7 @@ dotenv.config();
   delayMs: 0,
 }); */
 
-app.use(limiter);
+/* app.use(limiter); */
 
 // Setting content security policy to restrict execution of scripts to prevent XSS attacks
 app.use(
