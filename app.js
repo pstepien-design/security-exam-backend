@@ -33,9 +33,14 @@ app.use(
 );
 
 app.use(helmet.frameguard({ action: "sameorigin" }));
-
+// X-Content-Type-Options
 app.use(helmet.noSniff());
+
+// Hide X-Powered-By
 app.use(helmet.hidePoweredBy());
+
+// HTTP Strict Transport Security (HSTS)
+app.use(helmet.hsts());
 
 // Checking origin and referer headers to prevent CSRF attacks
 const checkOriginAndRefererHeaders = (req, res, next) => {
