@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "createdb": "node ./database/createSchemaItems.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "jest"
   },
   "author": "Pawel Stepien, Nikolai Lenander",
   "license": "MIT",
