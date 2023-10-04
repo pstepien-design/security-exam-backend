@@ -20,6 +20,7 @@
     "firebase-admin": "^11.8.0",
     "fs": "^0.0.1-security",
     "helmet": "^7.0.0",
+    "jest": "^29.7.0",
     "joi": "^17.9.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^7.2.0",
@@ -30,5 +31,10 @@
     "nodemon": "^2.0.16",
     "path": "^0.12.7"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "babel-jest": "^29.7.0"
+  }
 }
